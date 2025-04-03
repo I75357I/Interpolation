@@ -1,0 +1,6 @@
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/install/x64-debug/bin/Linear_test.exe
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/install/x64-debug/bin/Cubic_spline_test.exe
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/install/x64-debug/bin/Hermite_test.exe
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/install/x64-debug/bin/Delaune_test.exe
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/install/x64-debug/bin/Nearest_Triangle_test.exe
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/install/x64-debug/bin/NN_test.exe

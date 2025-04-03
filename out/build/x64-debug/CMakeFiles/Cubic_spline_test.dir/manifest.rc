@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/Cubic_spline_test.dir/embed.manifest"

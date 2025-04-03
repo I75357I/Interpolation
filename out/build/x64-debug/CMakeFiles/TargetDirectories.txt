@@ -1,0 +1,14 @@
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/MultiInterpolation.dir
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/ThreeDInterpolation.dir
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/NNInterpolation.dir
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/Linear_test.dir
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/Cubic_spline_test.dir
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/Hermite_test.dir
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/Delaune_test.dir
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/Nearest_Triangle_test.dir
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/NN_test.dir
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/edit_cache.dir
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/list_install_components.dir
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/install.dir
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/install/local.dir

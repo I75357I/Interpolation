@@ -1,0 +1,133 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-eaa416be1983d87875a1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "InterpolationLibrary",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Cubic_spline_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Cubic_spline_test-Debug-01c92eee967c517f4bf3.json",
+					"name" : "Cubic_spline_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Delaune_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Delaune_test-Debug-226baa885723d94ca9d2.json",
+					"name" : "Delaune_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Hermite_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Hermite_test-Debug-3e0631dbeaad5c9d2125.json",
+					"name" : "Hermite_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Linear_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Linear_test-Debug-ff6f43543857eb131801.json",
+					"name" : "Linear_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MultiInterpolation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MultiInterpolation-Debug-fa3a48632d2733fd5ce8.json",
+					"name" : "MultiInterpolation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "NNInterpolation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NNInterpolation-Debug-8abccfb76661289d7b9b.json",
+					"name" : "NNInterpolation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "NN_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NN_test-Debug-ece9203faceb182d5280.json",
+					"name" : "NN_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Nearest_Triangle_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Nearest_Triangle_test-Debug-9b65328a5bb4b3fff9b9.json",
+					"name" : "Nearest_Triangle_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ThreeDInterpolation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ThreeDInterpolation-Debug-87c1e9fb37c3daef00f2.json",
+					"name" : "ThreeDInterpolation",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/dmitr/OneDrive/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/InterpolationLibrary/out/build/x64-debug",
+		"source" : "C:/Users/dmitr/OneDrive/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/InterpolationLibrary"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
