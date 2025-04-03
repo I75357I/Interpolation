@@ -14,8 +14,8 @@ namespace interpolation {
      * boundary tangents to zero.
      *
      * References:
-     * - [Hermite interpolation](https://en.wikipedia.org/wiki/Hermite_interpolation)
-     * - "Computer Graphics: Principles and Practice"
+     * - https://en.wikipedia.org/wiki/Hermite_interpolation
+     * - https://habr.com/ru/articles/749288/
      *
      * Complexity:
      * - Precomputation (tangent computation): O(n)
