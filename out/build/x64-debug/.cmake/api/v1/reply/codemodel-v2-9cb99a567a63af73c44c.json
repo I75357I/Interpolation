@@ -1,0 +1,160 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-7e913bc87e69892b0c6b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "InterpolationLibrary",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Cubic_spline_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Cubic_spline_test-Debug-ce50063d6ad0f8bccc65.json",
+					"name" : "Cubic_spline_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "DMD_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DMD_test-Debug-99a64fed3e6a9d30e18e.json",
+					"name" : "DMD_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Delaune_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Delaune_test-Debug-a0d4fdba2c28bb337247.json",
+					"name" : "Delaune_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Diff_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Diff_test-Debug-830da6cf35e1c815cc17.json",
+					"name" : "Diff_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Hermite_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Hermite_test-Debug-9af451a8418e9fa95c7b.json",
+					"name" : "Hermite_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Linear_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Linear_test-Debug-3d06d1d76e5cd4305da7.json",
+					"name" : "Linear_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MultiInterpolation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MultiInterpolation-Debug-a6754b086fc5743c6415.json",
+					"name" : "MultiInterpolation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "NN_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NN_test-Debug-e3c28a47d7711186e483.json",
+					"name" : "NN_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "NSNN_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NSNN_test-Debug-7a2693eaeac545f30428.json",
+					"name" : "NSNN_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "NearTrMD_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NearTrMD_test-Debug-f6475a34ab62360a5282.json",
+					"name" : "NearTrMD_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Nearest_Triangle_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Nearest_Triangle_test-Debug-113e58082103bf4a5495.json",
+					"name" : "Nearest_Triangle_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ThreeDInterpolation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ThreeDInterpolation-Debug-ee65f32cf98ff859e1a3.json",
+					"name" : "ThreeDInterpolation",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/dmitr/OneDrive/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/InterpolationLibrary/out/build/x64-debug",
+		"source" : "C:/Users/dmitr/OneDrive/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/InterpolationLibrary"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

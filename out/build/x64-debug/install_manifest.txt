@@ -4,3 +4,7 @@ C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/install
 C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/install/x64-debug/bin/Delaune_test.exe
 C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/install/x64-debug/bin/Nearest_Triangle_test.exe
 C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/install/x64-debug/bin/NN_test.exe
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/install/x64-debug/bin/DMD_test.exe
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/install/x64-debug/bin/NearTrMD_test.exe
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/install/x64-debug/bin/Diff_test.exe
+C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/install/x64-debug/bin/NSNN_test.exe

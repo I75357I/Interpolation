@@ -9,7 +9,7 @@
 /**
  * Mean Squared Error (MSE) Loss
  *
- * MSE = (1 / N) * ? (y_i - x_i)^2
+ * MSE = (1 / N) * sum^i_1 (y_i - x_i)^2
  *
  * @param true_label Vector of ground-truth values.
  * @param pred Vector of model predictions.

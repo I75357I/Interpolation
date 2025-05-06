@@ -81,22 +81,17 @@ public:
      * @brief Creates and returns a default neural network model.
      *
      * The default model structure is:
-     *   - Linear layer: 1 input -> 50 neurons
+     *   - Linear layer: 1 input -> 100 neurons
      *   - ReLU activation
-     *   - Linear layer: 50 -> 30 neurons
-     *   - ReLU activation
-     *   - Linear layer: 30 -> 1 neuron
-     *   - Relu activation (output in [-1, 1])
+     *   - Linear layer: 100 -> 1 neurons
      *
      * @return NeuralNetwork A fully configured default model.
      */
     static NeuralNetwork DefaultModel() {
         NeuralNetwork model;
-        model.addLayer(new Linear(1, 50));
+        model.addLayer(new Linear(1, 100));
         model.addLayer(new Relu());
-        model.addLayer(new Linear(50, 30));
-        model.addLayer(new Relu());
-        model.addLayer(new Linear(30, 1));
+        model.addLayer(new Linear(100, 1));
         return model;
     }
 

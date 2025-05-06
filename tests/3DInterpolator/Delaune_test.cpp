@@ -9,9 +9,9 @@ int main() {
 
     std::vector<Point3D> trainingData = {
         {0.0, 0.0, 10.0},
-        {1.0, 0.0, 20.0},
-        {0.0, 1.0, 30.0},
-        {1.0, 1.0, 40.0}
+        {1.0, 1.0, 20.0},
+        {2.0, 2.0, 30.0},
+        {3.0, 3.0, 40.0}
     };
 
     DelauneInterpolation3D delauneInterp(trainingData);

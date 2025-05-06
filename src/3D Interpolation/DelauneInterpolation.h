@@ -2,7 +2,7 @@
 #define DELAUNE_INTERPOLATION_H
 
 #include "InterpolatorCommon3D.h"
-#include "Delaune.h"
+#include "Delaune_BW.h"
 #include <vector>
 #include <stdexcept>
 #include <limits>
@@ -11,8 +11,6 @@
  * DelauneInterpolation3D
  * -----------------------
  * Implements interpolation using a Delaune triangulation and barycentric coordinates.
- * If a test point does not fall into any triangle, the interpolated value is set to the
- * z value of the nearest training point (nearest neighbor).
  *
  * References:
  * - "Computational Geometry: Algorithms and Applications", de Berg et al.
@@ -50,9 +48,6 @@ private:
 
     // Finds the z value corresponding to a given 2D point from training data.
     Real findZ(const Point2D& pt) const;
-
-    // Returns the z value of the nearest training point to (x, y)
-    Real nearestNeighbor(Real x, Real y) const;
 };
 
 #endif // DELAUNE_INTERPOLATION_H

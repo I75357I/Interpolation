@@ -11,9 +11,7 @@
  * NearestTriangularInterpolation3D
  * ----------------------------------
  * Implements interpolation by selecting the 3 nearest (x,y) training points and using
- * barycentric interpolation. If the barycentric interpolation fails (e.g. due to a degenerate
- * triangle or if the point lies outside), the interpolation falls back to returning the z value
- * of the nearest training point.
+ * barycentric interpolation.
  *
  * Complexity:
  * - For each query, the search for the 3 nearest neighbors is O(n).
@@ -50,8 +48,6 @@ private:
     // Finds the z value corresponding to a given 2D point from training data.
     Real findZ(const Point2D& pt) const;
 
-    // Returns the z value of the nearest training point to (x, y)
-    Real nearestNeighbor(Real x, Real y) const;
 };
 
 #endif // NEAREST_TRIANGULAR_INTERPOLATION_3D_H

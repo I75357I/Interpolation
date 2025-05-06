@@ -1,5 +1,5 @@
 #include "DelauneInterpolation.h"
-#include "Delaune.h"
+#include "Delaune_BW.h"
 #include <cmath>
 #include <stdexcept>
 #include <limits>
@@ -17,10 +17,8 @@ DelauneInterpolation3D::DelauneInterpolation3D(const std::vector<Point3D>& train
 
 DelauneInterpolation3D::Real DelauneInterpolation3D::interpolate(Real x, Real y) const {
     for (const auto& tri : m_triangles) {
-        if (DelauneUtils::pointInTriangle(x, y, tri)) {
-            return barycentricInterpolate(x, y, tri);
-        }
-    }    return nearestNeighbor(x, y);
+        return barycentricInterpolate(x, y, tri);
+    }
 }
 
 std::vector<DelauneInterpolation3D::Point3D> DelauneInterpolation3D::predict(const std::vector<Point3D>& testPoints) const {
@@ -52,12 +50,6 @@ DelauneInterpolation3D::Real DelauneInterpolation3D::barycentricInterpolate(Real
     Real w2 = ((C.second - A.second) * (x - C.first) + (A.first - C.first) * (y - C.second)) / denom;
     Real w3 = 1.0 - w1 - w2;
 
-    if (w1 < -1e-12 || w1 > 1.0 + 1e-12 ||
-        w2 < -1e-12 || w2 > 1.0 + 1e-12 ||
-        w3 < -1e-12 || w3 > 1.0 + 1e-12)
-    {
-        throw std::runtime_error("Interpolation point lies outside the triangle.");
-    }
     return w1 * zA + w2 * zB + w3 * zC;
 }
 
@@ -70,19 +62,4 @@ DelauneInterpolation3D::Real DelauneInterpolation3D::findZ(const Point2D& pt) co
         }
     }
     throw std::runtime_error("Corresponding z-value for a triangle vertex not found.");
-}
-
-DelauneInterpolation3D::Real DelauneInterpolation3D::nearestNeighbor(Real x, Real y) const {
-    Real minDist = std::numeric_limits<Real>::max();
-    Real nearestZ = std::numeric_limits<Real>::quiet_NaN();
-    for (const auto& p : m_trainPoints) {
-        Real dx = std::get<0>(p) - x;
-        Real dy = std::get<1>(p) - y;
-        Real dist = std::hypot(dx, dy);
-        if (dist < minDist) {
-            minDist = dist;
-            nearestZ = std::get<2>(p);
-        }
-    }
-    return nearestZ;
 }

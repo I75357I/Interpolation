@@ -16,61 +16,39 @@ NearestTriangularInterpolation3D::NearestTriangularInterpolation3D(const std::ve
 }
 
 NearestTriangularInterpolation3D::Real NearestTriangularInterpolation3D::interpolate(Real x, Real y) const {
-    std::vector<size_t> indices(m_trainPoints.size());
-    std::iota(indices.begin(), indices.end(), 0);
+    Real bestD1 = std::numeric_limits<Real>::infinity();
+    Real bestD2 = std::numeric_limits<Real>::infinity();
+    Real bestD3 = std::numeric_limits<Real>::infinity();
+    size_t i1 = 0, i2 = 0, i3 = 0;
 
-    std::sort(indices.begin(), indices.end(),
-        [this, x, y](size_t a, size_t b) {
-            Real dx1 = std::get<0>(m_trainPoints[a]) - x;
-            Real dy1 = std::get<1>(m_trainPoints[a]) - y;
-            Real dx2 = std::get<0>(m_trainPoints[b]) - x;
-            Real dy2 = std::get<1>(m_trainPoints[b]) - y;
-            return std::hypot(dx1, dy1) < std::hypot(dx2, dy2);
-        });
+    for (size_t i = 0; i < m_trainPoints.size(); ++i) {
+        Real dx = std::get<0>(m_trainPoints[i]) - x;
+        Real dy = std::get<1>(m_trainPoints[i]) - y;
+        Real d = std::hypot(dx, dy);
 
-    size_t k = std::min<size_t>(10, m_trainPoints.size());
-    std::vector<size_t> candidates(indices.begin(), indices.begin() + k);
-
-    Real bestArea = std::numeric_limits<Real>::max();
-    bool found = false;
-    Real bestZ = std::numeric_limits<Real>::quiet_NaN();
-
-    for (size_t i = 0; i < candidates.size(); i++) {
-        for (size_t j = i + 1; j < candidates.size(); j++) {
-            for (size_t l = j + 1; l < candidates.size(); l++) {
-                Triangle tri;
-                tri.p[0] = { std::get<0>(m_trainPoints[candidates[i]]), std::get<1>(m_trainPoints[candidates[i]]) };
-                tri.p[1] = { std::get<0>(m_trainPoints[candidates[j]]), std::get<1>(m_trainPoints[candidates[j]]) };
-                tri.p[2] = { std::get<0>(m_trainPoints[candidates[l]]), std::get<1>(m_trainPoints[candidates[l]]) };
-
-                try {
-                    Real z = barycentricInterpolate(x, y, tri);
-
-                    const auto& A = tri.p[0];
-                    const auto& B = tri.p[1];
-                    const auto& C = tri.p[2];
-                    Real area = 0.5 * std::fabs((B.first - A.first) * (C.second - A.second) -
-                        (C.first - A.first) * (B.second - A.second));
-
-                    if (area < bestArea) {
-                        bestArea = area;
-                        bestZ = z;
-                        found = true;
-                    }
-                }
-                catch (const std::exception&) {
-
-                }
-            }
+        if (d < bestD1) {
+            bestD3 = bestD2;  i3 = i2;
+            bestD2 = bestD1;  i2 = i1;
+            bestD1 = d;       i1 = i;
+        }
+        else if (d < bestD2) {
+            bestD3 = bestD2;  i3 = i2;
+            bestD2 = d;       i2 = i;
+        }
+        else if (d < bestD3) {
+            bestD3 = d;       i3 = i;
         }
     }
 
-    if (found) {
-        return bestZ;
-    }
-    else {
-        return nearestNeighbor(x, y);
-    }
+    Triangle T;
+    const auto& P1 = m_trainPoints[i1];
+    const auto& P2 = m_trainPoints[i2];
+    const auto& P3 = m_trainPoints[i3];
+    T.p[0] = { std::get<0>(P1), std::get<1>(P1) };
+    T.p[1] = { std::get<0>(P2), std::get<1>(P2) };
+    T.p[2] = { std::get<0>(P3), std::get<1>(P3) };
+
+    return barycentricInterpolate(x, y, T);
 }
 
 
@@ -104,12 +82,6 @@ NearestTriangularInterpolation3D::Real NearestTriangularInterpolation3D::barycen
     Real w2 = ((C.second - A.second) * (x - C.first) + (A.first - C.first) * (y - C.second)) / denom;
     Real w3 = 1.0 - w1 - w2;
 
-    if (w1 < -1e-12 || w1 > 1.0 + 1e-12 ||
-        w2 < -1e-12 || w2 > 1.0 + 1e-12 ||
-        w3 < -1e-12 || w3 > 1.0 + 1e-12)
-    {
-        throw std::runtime_error("Interpolation point lies outside the triangle.");
-    }
     return w1 * zA + w2 * zB + w3 * zC;
 }
 
@@ -122,19 +94,4 @@ NearestTriangularInterpolation3D::Real NearestTriangularInterpolation3D::findZ(c
         }
     }
     throw std::runtime_error("Corresponding z-value for a vertex not found.");
-}
-
-NearestTriangularInterpolation3D::Real NearestTriangularInterpolation3D::nearestNeighbor(Real x, Real y) const {
-    Real minDist = std::numeric_limits<Real>::max();
-    Real nearestZ = std::numeric_limits<Real>::quiet_NaN();
-    for (const auto& p : m_trainPoints) {
-        Real dx = std::get<0>(p) - x;
-        Real dy = std::get<1>(p) - y;
-        Real dist = std::hypot(dx, dy);
-        if (dist < minDist) {
-            minDist = dist;
-            nearestZ = std::get<2>(p);
-        }
-    }
-    return nearestZ;
 }

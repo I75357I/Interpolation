@@ -80,6 +80,38 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   include("C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/NN_test.dir/install-cxx-module-bmi-Debug.cmake" OPTIONAL)
 endif()
 
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/DMD_test.exe")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  include("C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/DMD_test.dir/install-cxx-module-bmi-Debug.cmake" OPTIONAL)
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/NearTrMD_test.exe")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  include("C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/NearTrMD_test.dir/install-cxx-module-bmi-Debug.cmake" OPTIONAL)
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/Diff_test.exe")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  include("C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/Diff_test.dir/install-cxx-module-bmi-Debug.cmake" OPTIONAL)
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/NSNN_test.exe")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  include("C:/Users/dmitr/OneDrive/Рабочий стол/InterpolationLibrary/out/build/x64-debug/CMakeFiles/NSNN_test.dir/install-cxx-module-bmi-Debug.cmake" OPTIONAL)
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()
